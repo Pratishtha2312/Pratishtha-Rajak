@@ -1,0 +1,44 @@
+<input type="text" name="" id="i1" value="0"><br>
+<button onclick="val('0')">0</button>
+<button onclick="val('1')">1</button>
+<button onclick="val('2')">2</button>
+<button onclick="val('3')">3</button>
+<button onclick="val('+')">+</button>
+<button onclick="val('/')">/</button>
+<br>
+<button onclick="rchar()">c</button>
+<button onclick="val('4')">4</button>
+<button onclick="val('5')">5</button>
+<button onclick="val('6')">6</button>
+<button onclick="val('-')">-</button>
+<button onclick="val('**2')">x<sup>2</sup></button>
+<br>
+<button onclick="clr()">C</button>
+<button onclick="val('7')">7</button>
+<button onclick="val('8')">8</button>
+<button onclick="val('9')">9</button>
+<button onclick="val('*')">x</button>
+<button onclick="res()">=</button>
+<script>
+	function rchar ()
+	{
+		var t=document.getElementById("i1").value;
+		t=t.substring(0,t.length-1)
+		document.getElementById("i1").value=t
+	}
+	function clr()
+	{
+		document.getElementById("i1").value=0;
+	}
+	function res()
+	{
+		var t=document.getElementById("i1").value;
+		document.getElementById('i1').value=eval(t);
+
+	}
+	function val(n)
+	{
+		var t=document.getElementById("i1").value;
+		document.getElementById("i1").value=t+n;
+	}
+</script>
